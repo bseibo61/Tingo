@@ -1,0 +1,15 @@
+4/3 5:00 Meeting
+
+Everyone is in attendence
+
+This is about working on the Beta release
+
+Since the last meeting:
+Ben has redone the health system and began fixing a bug with a hot fix
+Jon fixed some animations and worked on paths
+Ian has tracked steps and used android sensor plugin, and listed the app on the google play store
+
+Before the next meeting:
+Ben will work on tensorFlow
+Jon will work on tensorFlow
+Ian will fix the step counter and make new scenes

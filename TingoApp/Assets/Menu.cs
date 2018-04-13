@@ -6,24 +6,53 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour {
 	//change scene
+
+	GameObject levelObj;
+	GameObject sliderObj;
+	PedometerPlugin pedometerPlugin;
+
+	int STEPS_PER_BERRY = 500;
+	int STEPS_PER_XP = 1000;
+
 	public void changeScene(string loadScene){
 		SceneManager.LoadScene(loadScene);
 	}
 
+	public void buyBerries(){
+		pedometerPlugin = PedometerPlugin.GetInstance ();
+		if((pedometerPlugin.GetTotalStep() - PlayerPrefs.GetInt("baseSubtract") - PlayerPrefs.GetInt("berrySpent") > STEPS_PER_BERRY)){
+			PlayerPrefs.SetInt ("berries", PlayerPrefs.GetInt ("berries") + 1);
+			PlayerPrefs.SetInt ("berrySpent", PlayerPrefs.GetInt ("berrySpent") + STEPS_PER_BERRY);
+		}
+	}
+
 	public void Start(){
-		GameObject levelObj = GameObject.Find ("level");
-		GameObject sliderObj = GameObject.Find("xpSlider");
+		
+
+	}
+
+	public void Update(){
+
+		pedometerPlugin = PedometerPlugin.GetInstance ();
+
+		levelObj = GameObject.Find ("level");
+		sliderObj = GameObject.Find("xpSlider");
 
 		if (levelObj != null && sliderObj != null) {
 			//set level text from memory
+
+			int steps = pedometerPlugin.GetTotalStep() - PlayerPrefs.GetInt ("baseSubtract") - PlayerPrefs.GetInt("berrySpent");
+
+			int levelNumber = steps / STEPS_PER_XP;
+			float toNextLevel = (steps % STEPS_PER_XP) / (float)STEPS_PER_XP;
+
 			Text levelText = levelObj.GetComponent<Text> ();
-			levelText.GetComponentInChildren<Text>().text = ""+PlayerPrefs.GetInt ("level");
+			levelText.GetComponentInChildren<Text>().text = "" + levelNumber;
 
 			//set xp slider fullness
 			Slider xpSlider = sliderObj.GetComponent<Slider>();
 			Debug.Log (xpSlider != null);
-			xpSlider.value = PlayerPrefs.GetFloat ("xp");
+			xpSlider.value = toNextLevel;
 		}
-	
 	}
 }

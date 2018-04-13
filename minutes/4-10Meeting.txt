@@ -1,0 +1,15 @@
+4/10 5:00 Meeting
+
+Everyone in attendence
+
+This is about finishing everything up before the beta release
+
+Since the last meeting:
+Ben has recearched tensorflow and decided not to use it
+Jon has started using a built in sentimant analysis library for unity
+Ian has worked on steps 
+
+Before the next meeting:
+Jon will finsih sentimate analysis
+Ben will change the health system to fix steps bug
+Ian will work on steps and animations

@@ -21,6 +21,8 @@ public class stepText : MonoBehaviour {
 		pedometerPlugin = PedometerPlugin.GetInstance ();
 		isReady = true;
 
+//		pedometerPlugin.OnStepCount(OnStepCount,OnStepDetect);
+
 //		//set to zero to hide debug toast messages
 //		pedometerPlugin.SetDebug (0);
 //
@@ -47,9 +49,20 @@ public class stepText : MonoBehaviour {
 //			//UpdateStepDetectorStatus ("not available");
 //		}
 	}
+
+	private void OnStepCount(int count){
+		if(isReady)myText.text = "" + count;
+		Debug.Log("OnStepCount count " + count);
+	}
+
+	//step detect event is triggered
+	private void OnStepDetect(){
+		//if(isReady)myText.text = "" + count;
+		Debug.Log("OnStepDetect");
+	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(isReady)myText.text = "" + pedometerPlugin.GetStepToday();
+		if(isReady)myText.text = "" + (pedometerPlugin.GetTotalStep() - PlayerPrefs.GetInt("baseSubtract") - PlayerPrefs.GetInt("berrySpent"));
 	}
 }

@@ -2,11 +2,6 @@
 
 [![Join the chat at https://gitter.im/Tingo-Github/Lobby](https://badges.gitter.im/Tingo-Github/Lobby.svg)](https://gitter.im/Tingo-Github/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-
-**This is not our only repository**
-
-The link to the second one with the tensorflow code is [here](https://github.com/bseibo61/Tingo-TensorFlow)
-
 A friend that keeps you on your toes.
 
 # Project Description
@@ -35,7 +30,8 @@ It will also be possible to talk to the Tingo and have it react to the words tha
 We have an App on the Google Play store for easy use!
 Here is the [link](https://play.google.com/store/apps/details?id=com.tingoapp)
 
-Link to youtube video: https://youtu.be/0_vBo2degrY
+Link to youtube video: [link](https://www.youtube.com/watch?v=jUQiTgDmenQ&feature=youtu.be)
 
+Link to Landing Page: [link](https://tingo-87fcd.firebaseapp.com/)
 
 
