@@ -41,10 +41,11 @@ public class Menu : MonoBehaviour {
 		if (levelObj != null && sliderObj != null) {
 			//set level text from memory
 
-			int steps = pedometerPlugin.GetTotalStep() - PlayerPrefs.GetInt ("baseSubtract") - PlayerPrefs.GetInt("berrySpent");
+			//int steps = pedometerPlugin.GetTotalStep() - PlayerPrefs.GetInt ("baseSubtract") - PlayerPrefs.GetInt("berrySpent");
+			int stepsXP = pedometerPlugin.GetTotalStep() - PlayerPrefs.GetInt ("baseSubtract");
 
-			int levelNumber = steps / STEPS_PER_XP;
-			float toNextLevel = (steps % STEPS_PER_XP) / (float)STEPS_PER_XP;
+			int levelNumber = stepsXP / STEPS_PER_XP;
+			float toNextLevel = (stepsXP % STEPS_PER_XP) / (float)STEPS_PER_XP;
 
 			Text levelText = levelObj.GetComponent<Text> ();
 			levelText.GetComponentInChildren<Text>().text = "" + levelNumber;
