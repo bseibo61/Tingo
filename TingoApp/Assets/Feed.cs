@@ -8,9 +8,9 @@ using UnityEngine.SceneManagement;
 public class Feed : MonoBehaviour {
 	
 	float berryValue = .1f;				//How much berries raise health by
-	float healthDrainRate = .027f;		//How much health is lost per hour (this takes 36 houres to starve)
+	float healthDrainRate = .037f;		//How much health is lost per hour (this takes 36 houres to starve)
 
-	int steps = 1375;				//This will be replaced with the actual steps that were gathered that day
+	int steps = 1000;				//This will be replaced with the actual steps that were gathered that day
 
 	private PedometerPlugin pedometerPlugin;
 
