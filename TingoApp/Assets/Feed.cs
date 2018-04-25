@@ -55,10 +55,20 @@ public class Feed : MonoBehaviour {
 			var health = healthSlider.value;
 			PlayerPrefs.SetFloat ("health", health);
 			if (health <= 0) {
-				PlayerPrefs.SetInt("baseSubtract", pedometerPlugin.GetTotalStep());
-//				pedometerPlugin.DeleteData ();
-//				pedometerPlugin.StopPedometerService ();
-				changeScene ("death");
+				//Check if app has been installed for the first time
+				if (PlayerPrefs.GetInt ("hasRan") == 0) {
+					PlayerPrefs.SetInt ("berries",5);
+					PlayerPrefs.SetFloat ("xp", 0);
+					PlayerPrefs.SetFloat ("health", 1);
+					PlayerPrefs.SetInt ("level", 0);
+					PlayerPrefs.SetInt ("steps", 0);
+					PlayerPrefs.SetInt ("hasRan",1);
+					healthSlider.value = 1;
+				} else {
+					PlayerPrefs.SetInt ("baseSubtract", pedometerPlugin.GetTotalStep ());
+					changeScene ("death");
+				}
+
 			}
 		}
 	
