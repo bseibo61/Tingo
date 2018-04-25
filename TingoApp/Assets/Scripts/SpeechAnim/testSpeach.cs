@@ -174,8 +174,8 @@ public class testSpeach : MonoBehaviour {
 			timer += Time.deltaTime;
 			yield return null;
 		}
-		transform.localPosition = new Vector3(transform.localPosition.x, 0.0f, transform.localPosition.z);
-		transform.localPosition = new Vector3(transform.localPosition.x, .5947088f, transform.localPosition.z);
+
+		transform.localPosition = new Vector3(transform.localPosition.x, -0.52f, transform.localPosition.z);
 	}
 
 	void Flip(){
