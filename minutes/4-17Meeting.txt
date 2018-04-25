@@ -1,0 +1,16 @@
+4/17 5:00 Meeting
+
+Everyone in attendence
+
+This is about fixing bugs
+
+Since the last meeting:
+We all worked on the presentation
+Ben has made the landing page and fixed the health system
+Jon has added voice and animations
+Ian has fixed the steps bug and added the ability to buy berries
+
+Before the next meeting:
+Ben will help jon and look into add on features
+Jon will fix the bug where Tingos get stuck in the error
+Ian will try to fix the crashing and steps

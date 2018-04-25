@@ -11,8 +11,8 @@ public class Menu : MonoBehaviour {
 	GameObject sliderObj;
 	PedometerPlugin pedometerPlugin;
 
-	int STEPS_PER_BERRY = 500;
-	int STEPS_PER_XP = 1000;
+	int STEPS_PER_BERRY = 1000;
+	int STEPS_PER_XP = 1700;
 
 	public void changeScene(string loadScene){
 		SceneManager.LoadScene(loadScene);
