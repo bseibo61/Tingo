@@ -63,6 +63,9 @@ public class stepText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(isReady)myText.text = "" + (pedometerPlugin.GetTotalStep() - PlayerPrefs.GetInt("baseSubtract") - PlayerPrefs.GetInt("berrySpent"));
+		int t = (pedometerPlugin.GetTotalStep() - PlayerPrefs.GetInt("baseSubtract") - PlayerPrefs.GetInt("berrySpent"));
+		if (t < 0)
+			t = 0;
+		if(isReady)myText.text = "" + t;
 	}
 }
