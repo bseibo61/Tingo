@@ -25,8 +25,8 @@ public class testSpeach : MonoBehaviour {
 	private AudioSource sourceHmm;
 
 	//used for animations
-	float jumpTime = .8f;
-	float jumpHeight = 5.0f;
+	float jumpTime = .7f;
+	float jumpHeight = 4.0f;
 	float realHeight = .5947088f;
 
 	//used for sentiment analysis
@@ -175,7 +175,7 @@ public class testSpeach : MonoBehaviour {
 			yield return null;
 		}
 
-		transform.localPosition = new Vector3(transform.localPosition.x, .5947088f, transform.localPosition.z);
+		transform.localPosition = new Vector3(transform.localPosition.x, -0.52f, transform.localPosition.z);
 	}
 
 	void Flip(){

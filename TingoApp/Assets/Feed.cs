@@ -8,9 +8,9 @@ using UnityEngine.SceneManagement;
 public class Feed : MonoBehaviour {
 	
 	float berryValue = .1f;				//How much berries raise health by
-	float healthDrainRate = .027f;		//How much health is lost per hour (this takes 36 houres to starve)
+	float healthDrainRate = .037f;		//How much health is lost per hour (this takes 36 houres to starve)
 
-	int steps = 1375;				//This will be replaced with the actual steps that were gathered that day
+	int steps = 1000;				//This will be replaced with the actual steps that were gathered that day
 
 	private PedometerPlugin pedometerPlugin;
 
@@ -55,10 +55,20 @@ public class Feed : MonoBehaviour {
 			var health = healthSlider.value;
 			PlayerPrefs.SetFloat ("health", health);
 			if (health <= 0) {
-				PlayerPrefs.SetInt("baseSubtract", pedometerPlugin.GetTotalStep());
-//				pedometerPlugin.DeleteData ();
-//				pedometerPlugin.StopPedometerService ();
-				changeScene ("death");
+				//Check if app has been installed for the first time
+				if (PlayerPrefs.GetInt ("hasRan") == 0) {
+					PlayerPrefs.SetInt ("berries",5);
+					PlayerPrefs.SetFloat ("xp", 0);
+					PlayerPrefs.SetFloat ("health", 1);
+					PlayerPrefs.SetInt ("level", 0);
+					PlayerPrefs.SetInt ("steps", 0);
+					PlayerPrefs.SetInt ("hasRan",1);
+					healthSlider.value = 1;
+				} else {
+					PlayerPrefs.SetInt ("baseSubtract", pedometerPlugin.GetTotalStep ());
+					changeScene ("death");
+				}
+
 			}
 		}
 	

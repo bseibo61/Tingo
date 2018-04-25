@@ -11,8 +11,8 @@ public class Menu : MonoBehaviour {
 	GameObject sliderObj;
 	PedometerPlugin pedometerPlugin;
 
-	int STEPS_PER_BERRY = 500;
-	int STEPS_PER_XP = 1000;
+	int STEPS_PER_BERRY = 1000;
+	int STEPS_PER_XP = 1700;
 
 	public void changeScene(string loadScene){
 		SceneManager.LoadScene(loadScene);
@@ -32,7 +32,7 @@ public class Menu : MonoBehaviour {
 	}
 
 	public void Update(){
-
+		
 		pedometerPlugin = PedometerPlugin.GetInstance ();
 
 		levelObj = GameObject.Find ("level");
@@ -52,7 +52,6 @@ public class Menu : MonoBehaviour {
 
 			//set xp slider fullness
 			Slider xpSlider = sliderObj.GetComponent<Slider>();
-			Debug.Log (xpSlider != null);
 			xpSlider.value = toNextLevel;
 		}
 	}
