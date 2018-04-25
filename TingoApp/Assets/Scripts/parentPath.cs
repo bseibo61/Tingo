@@ -16,7 +16,7 @@ public class parentPath : MonoBehaviour {
 	void Update(){
 		getPositionX = transform.position.x;
 		getPositionZ = transform.position.z;
-		if ((getPositionX < -4.095 && getPositionX > -4.111) && (getPositionZ > 1.61 && getPositionZ < 1.65)) {
+		if ((getPositionX < -4.090 && getPositionX > -4.15) && (getPositionZ > 1.61 && getPositionZ < 1.65)) {
 			goToPositionTwo ();
 		}
 
