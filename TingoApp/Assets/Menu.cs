@@ -32,7 +32,7 @@ public class Menu : MonoBehaviour {
 	}
 
 	public void Update(){
-
+		
 		pedometerPlugin = PedometerPlugin.GetInstance ();
 
 		levelObj = GameObject.Find ("level");
@@ -51,7 +51,6 @@ public class Menu : MonoBehaviour {
 
 			//set xp slider fullness
 			Slider xpSlider = sliderObj.GetComponent<Slider>();
-			Debug.Log (xpSlider != null);
 			xpSlider.value = toNextLevel;
 		}
 	}
