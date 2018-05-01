@@ -1,0 +1,16 @@
+5/1 Meeting
+
+Everyone in attendence
+
+This is about prepping for the final release 
+
+Since the last meeting:
+Jon and Ben figured out Price Rite is better than Aldi
+Ben has prepped for the presentation
+Jon has worked on the presentation
+Ian has worked on randomization
+
+Before the next meeting
+Ben will implement a 115 feature
+Jon will fix 'stuff'
+Ian will do a day 1 patch
