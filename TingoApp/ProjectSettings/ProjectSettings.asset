@@ -243,7 +243,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/Brandimaxxx/projects/Tingo/TingoApp/user.keystore
+  AndroidKeystoreName: C:/Users/JonHiggins/Documents/GitHub/Tingo/TingoApp/user.keystore
   AndroidKeyaliasName: tingo
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
@@ -632,6 +632,7 @@ PlayerSettings:
   XboxOneSplashScreen: {fileID: 0}
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
+  XboxOneXTitleMemory: 8
   xboxOneScriptCompiler: 0
   vrEditorSettings:
     daydream:
