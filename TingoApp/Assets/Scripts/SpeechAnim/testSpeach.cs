@@ -69,6 +69,7 @@ public class testSpeach : MonoBehaviour {
 		int jump = 0;
 		int flip = 0;
 		int speak = 0;
+		int spin = 0;
 		int red = 0;
 		int blue = 0;
 		int green = 0;
@@ -98,24 +99,27 @@ public class testSpeach : MonoBehaviour {
 				grey++;
 			}
 		}
-		if (speak > flip && speak > jump)
+		if (speak > flip && speak > jump && speak > spin)
 			input = "speak";
-		else if (flip > jump && flip > speak)
+		else if (flip > jump && flip > speak && flip > spin)
 			input = "flip";
-		else if (jump > flip && jump > speak)
+		else if (jump > flip && jump > speak && jump > spin)
 			input = "jump";
+		else if (spin > flip && spin > speak && spin > jump)
+			input = "spin";
 		else if (greatness == 1 && surpass == 1)
 			input = "surpass";
+		
 		else if (blue > 0)
-			GetComponent<Renderer> ().materials [0].color = Color.blue;
+			input = "blue";
 		else if (pink > 0)
-			GetComponent<Renderer> ().materials [0].color = Color.magenta;
+			input = "pink";
 		else if (green > 0)
-			GetComponent<Renderer> ().materials [0].color = Color.green;
+			input = "green";
 		else if (red > 0)
-			GetComponent<Renderer> ().materials [0].color = Color.red;
+			input = "red";
 		else if (grey > 0)
-			GetComponent<Renderer> ().materials [0].color = Color.grey;
+			input = "grey";
 
 
 		else {
@@ -177,12 +181,20 @@ public class testSpeach : MonoBehaviour {
 		if (input == "surpass") {
 			sourceSurpass.PlayOneShot (surpassGreatness);
 		}
-		if (input == "surpass") {
-			sourceSurpass.PlayOneShot (surpassGreatness);
+		if (input == "spin") {
+			Spin ();
 		}
-		if (input == "surpass") {
-			sourceSurpass.PlayOneShot (surpassGreatness);
-		}
+
+		if (input == "blue")
+			GetComponent<Renderer> ().materials [0].color = Color.blue;
+		if (input == "pink")
+			GetComponent<Renderer> ().materials [0].color = Color.magenta;
+		if (input == "green")
+			GetComponent<Renderer> ().materials [0].color = Color.green;
+		if (input == "red")
+			GetComponent<Renderer> ().materials [0].color = Color.red;
+		if (input == "grey")
+			GetComponent<Renderer> ().materials [0].color = Color.grey;
 
 		input = null;
 	}
