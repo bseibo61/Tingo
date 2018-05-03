@@ -97,6 +97,8 @@ public class testSpeach : MonoBehaviour {
 				pink++;
 			} else if (x == "grey") {
 				grey++;
+			} else if (x == "spin") {
+				spin++;
 			}
 		}
 		if (speak > flip && speak > jump && speak > spin)
