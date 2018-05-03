@@ -69,6 +69,12 @@ public class testSpeach : MonoBehaviour {
 		int jump = 0;
 		int flip = 0;
 		int speak = 0;
+		int red = 0;
+		int blue = 0;
+		int green = 0;
+		int pink = 0;
+		int grey = 0;
+
 		foreach (string x in words) {
 			if (x == "jump") {
 				jump++;
@@ -76,10 +82,21 @@ public class testSpeach : MonoBehaviour {
 				flip++;
 			} else if (x == "yell" || x == "speak") {
 				speak++;
-			} else if (x == "surpass")
+			} else if (x == "surpass") {
 				surpass++;
-			else if (x == "greatness")
+			} else if (x == "greatness") {
 				greatness++;
+			} else if (x == "blue") {
+				blue++;
+			} else if (x == "green") {
+				green++;
+			} else if (x == "red") {
+				red++;
+			} else if (x == "pink") {
+				pink++;
+			} else if (x == "grey") {
+				grey++;
+			}
 		}
 		if (speak > flip && speak > jump)
 			input = "speak";
@@ -87,9 +104,21 @@ public class testSpeach : MonoBehaviour {
 			input = "flip";
 		else if (jump > flip && jump > speak)
 			input = "jump";
-		else if (greatness == 1 && surpass == 1) {
+		else if (greatness == 1 && surpass == 1)
 			input = "surpass";
-		} else {
+		else if (blue > 0)
+			GetComponent<Renderer> ().materials [0].color = Color.blue;
+		else if (pink > 0)
+			GetComponent<Renderer> ().materials [0].color = Color.magenta;
+		else if (green > 0)
+			GetComponent<Renderer> ().materials [0].color = Color.green;
+		else if (red > 0)
+			GetComponent<Renderer> ().materials [0].color = Color.red;
+		else if (grey > 0)
+			GetComponent<Renderer> ().materials [0].color = Color.grey;
+
+
+		else {
 			predictionObject.PredictSentimentText (newText);
 			if (!threadStarted) {// Thread Started
 				threadStarted = true;
@@ -148,6 +177,13 @@ public class testSpeach : MonoBehaviour {
 		if (input == "surpass") {
 			sourceSurpass.PlayOneShot (surpassGreatness);
 		}
+		if (input == "surpass") {
+			sourceSurpass.PlayOneShot (surpassGreatness);
+		}
+		if (input == "surpass") {
+			sourceSurpass.PlayOneShot (surpassGreatness);
+		}
+
 		input = null;
 	}
 

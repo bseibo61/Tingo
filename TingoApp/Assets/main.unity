@@ -2154,6 +2154,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &735646468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 735646456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde276aea8dd5b74bb1cd0d9d26a816d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blue: {r: 0.05882353, g: 0.52156866, b: 0.79607844, a: 1}
 --- !u!1 &801200075 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: d516cb11a13827f44b5060b61859fdbd, type: 3}
@@ -3301,6 +3313,16 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!114 &1289121862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1316675673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,7 +3332,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1316675674}
   - component: {fileID: 1316675676}
-  - component: {fileID: 1316675675}
   m_Layer: 5
   m_Name: berryCount
   m_TagString: Untagged
@@ -3336,45 +3357,6 @@ RectTransform:
   m_AnchoredPosition: {x: -60.9, y: -68}
   m_SizeDelta: {x: 75.5, y: 57.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1316675675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1289121856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073a32a7582181249ad5836f99103305, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_GameObject: {fileID: 1316675673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 14cf6b56c57a1384e9642593c3b85ebb, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 5
 --- !u!222 &1316675676
 CanvasRenderer:
   m_ObjectHideFlags: 0
