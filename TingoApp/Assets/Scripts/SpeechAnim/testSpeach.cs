@@ -69,6 +69,13 @@ public class testSpeach : MonoBehaviour {
 		int jump = 0;
 		int flip = 0;
 		int speak = 0;
+		int spin = 0;
+		int red = 0;
+		int blue = 0;
+		int green = 0;
+		int pink = 0;
+		int grey = 0;
+
 		foreach (string x in words) {
 			if (x == "jump") {
 				jump++;
@@ -76,20 +83,48 @@ public class testSpeach : MonoBehaviour {
 				flip++;
 			} else if (x == "yell" || x == "speak") {
 				speak++;
-			} else if (x == "surpass")
+			} else if (x == "surpass") {
 				surpass++;
-			else if (x == "greatness")
+			} else if (x == "greatness") {
 				greatness++;
+			} else if (x == "blue") {
+				blue++;
+			} else if (x == "green") {
+				green++;
+			} else if (x == "red") {
+				red++;
+			} else if (x == "pink") {
+				pink++;
+			} else if (x == "grey") {
+				grey++;
+			} else if (x == "spin") {
+				spin++;
+			}
 		}
-		if (speak > flip && speak > jump)
+		if (speak > flip && speak > jump && speak > spin)
 			input = "speak";
-		else if (flip > jump && flip > speak)
+		else if (flip > jump && flip > speak && flip > spin)
 			input = "flip";
-		else if (jump > flip && jump > speak)
+		else if (jump > flip && jump > speak && jump > spin)
 			input = "jump";
-		else if (greatness == 1 && surpass == 1) {
+		else if (spin > flip && spin > speak && spin > jump)
+			input = "spin";
+		else if (greatness == 1 && surpass == 1)
 			input = "surpass";
-		} else {
+		
+		else if (blue > 0)
+			input = "blue";
+		else if (pink > 0)
+			input = "pink";
+		else if (green > 0)
+			input = "green";
+		else if (red > 0)
+			input = "red";
+		else if (grey > 0)
+			input = "grey";
+
+
+		else {
 			predictionObject.PredictSentimentText (newText);
 			if (!threadStarted) {// Thread Started
 				threadStarted = true;
@@ -148,6 +183,21 @@ public class testSpeach : MonoBehaviour {
 		if (input == "surpass") {
 			sourceSurpass.PlayOneShot (surpassGreatness);
 		}
+		if (input == "spin") {
+			Spin ();
+		}
+
+		if (input == "blue")
+			GetComponent<Renderer> ().materials [0].color = Color.blue;
+		if (input == "pink")
+			GetComponent<Renderer> ().materials [0].color = Color.magenta;
+		if (input == "green")
+			GetComponent<Renderer> ().materials [0].color = Color.green;
+		if (input == "red")
+			GetComponent<Renderer> ().materials [0].color = Color.red;
+		if (input == "grey")
+			GetComponent<Renderer> ().materials [0].color = Color.grey;
+
 		input = null;
 	}
 

@@ -30,7 +30,7 @@ It will also be possible to talk to the Tingo and have it react to the words tha
 We have an App on the Google Play store for easy use!
 Here is the [link](https://play.google.com/store/apps/details?id=com.tingoapp)
 
-Link to youtube video: [link](https://www.youtube.com/watch?v=jUQiTgDmenQ&feature=youtu.be)
+Link to youtube video: [link](https://www.youtube.com/watch?v=h4YWjE-69kA&feature=youtu.be)
 
 Link to Landing Page: [link](https://tingo-87fcd.firebaseapp.com/)
 
